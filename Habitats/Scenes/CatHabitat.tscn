@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://no0fnto2nlsr"]
+
+[ext_resource type="Script" path="res://Habitats/Scripts/CatHabitat.gd" id="1_3g2ke"]
+[ext_resource type="Texture2D" uid="uid://be8411txvg38b" path="res://Furnitures.png" id="2_dgg08"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_584fk"]
+atlas = ExtResource("2_dgg08")
+region = Rect2(203, 223, 103, 103)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j1hw8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_584fk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xvjkm"]
+radius = 47.3814
+
+[node name="CatHabitat" type="Node2D" groups=["Habitats"]]
+script = ExtResource("1_3g2ke")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_j1hw8")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_xvjkm")

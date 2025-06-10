@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://qo1jdxatgdro"]
+
+[ext_resource type="Script" path="res://Game Screens/Scripts/MainGameScreen.gd" id="1_jn4ry"]
+[ext_resource type="Script" path="res://Game Screens/Scripts/HabButton.gd" id="3_lrhrq"]
+
+[node name="MainGameScreen" type="Node2D"]
+script = ExtResource("1_jn4ry")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_lrhrq")
+
+[node name="Button" type="Button" parent="Area2D"]
+offset_left = 592.0
+offset_top = 26.0
+offset_right = 658.0
+offset_bottom = 57.0
+text = "Habitat
+"
+
+[node name="ShopButton" type="Button" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+text = "Shop
+"
+
+[connection signal="pressed" from="Area2D/Button" to="Area2D" method="_on_button_pressed"]
+[connection signal="pressed" from="ShopButton" to="." method="_on_shop_button_pressed"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://1s0dvicugdn2"]
+
+[ext_resource type="Script" path="res://Base Objects (Parent Classes)/Scripts/BaseCritter.gd" id="1_lsgtu"]
+
+[node name="BaseCritter" type="Node2D"]
+script = ExtResource("1_lsgtu")
